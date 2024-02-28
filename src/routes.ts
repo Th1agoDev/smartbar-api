@@ -1,10 +1,12 @@
-import {Router, Request, Response} from 'express';
-import 'express-async-errors';
+import {Router} from 'express';
+
+import { CreateUserController} from './controllers/user/CreateUserControllers'
+
 
 const router = Router();
 
-router.get('/test',(req: Request, res: Response) => {
-    return res.json({nome: 'smartbar'})
-})
+//User Rotas
+router.post('/users', new CreateUserController().handle)
+
 
 export {router};
