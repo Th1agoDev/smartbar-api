@@ -34,7 +34,7 @@ datasource db {
  
   products Product[]
  }
-  model Product{
+  model Product{ 
     id String @id @default(uuid())
     name String 
     price String 
